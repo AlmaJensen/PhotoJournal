@@ -37,11 +37,45 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="PageModels\LoginPageModel.cs" />
+    <Compile Include="PageModels\AccountPageModel.cs" />
+    <Compile Include="PageModels\AddEditEntryPageModel.cs" />
+    <Compile Include="PageModels\AddEditPhotoEntryPageModel.cs" />
+    <Compile Include="PageModels\EntryListPageModel.cs" />
+    <Compile Include="PageModels\EntryMainPageModel.cs" />
+    <Compile Include="PageModels\LargePhotoViewPageModel.cs" />
+    <Compile Include="PageModels\MapPageModel.cs" />
+    <Compile Include="PageModels\PinPageModel.cs" />
     <Compile Include="PageModels\RegistrationPageModel.cs" />
-    <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="PageModels\ViewPhotoEntryPageModel.cs" />
+    <Compile Include="Pages\AccountPage.xaml.cs">
+      <DependentUpon>AccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditEntryPage.xaml.cs">
+      <DependentUpon>AddEditEntryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditPhotoEntryPage.xaml.cs">
+      <DependentUpon>AddEditPhotoEntryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EntryListPage.xaml.cs">
+      <DependentUpon>EntryListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EntryMainPage.xaml.cs">
+      <DependentUpon>EntryMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LargePhotoViewPage.xaml.cs">
+      <DependentUpon>LargePhotoViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PinPage.xaml.cs">
+      <DependentUpon>PinPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewPhotoEntryPage.xaml.cs">
+      <DependentUpon>ViewPhotoEntryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -78,7 +112,44 @@
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Pages\AccountPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\AddEditEntryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\AddEditPhotoEntryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\EntryListPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\EntryMainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\LargePhotoViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\MapPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\PinPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ViewPhotoEntryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\RegistrationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
