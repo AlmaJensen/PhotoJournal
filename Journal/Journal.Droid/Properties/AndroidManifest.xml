@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-	<uses-sdk android:minSdkVersion="15" />
-	<application></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.jazzdevstudio.journal" android:installLocation="auto" android:versionCode="1" android:versionName="1">
+	<uses-sdk android:minSdkVersion="19" />
+	<application android:label="Journal" android:icon="@drawable/icon"></application>
 </manifest>
