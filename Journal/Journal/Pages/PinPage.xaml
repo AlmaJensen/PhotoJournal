@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Journal.Pages.PinPage">
 	<StackLayout VerticalOptions="FillAndExpand">
-	<Entry Text="{Binding EntryText}" VerticalOptions="Center" Keyboard="Numeric" IsPassword="true" />
+	<Entry x:Name="Hi" Text="{Binding EntryText}" VerticalOptions="Center" Keyboard="Numeric" IsPassword="true" />
 	<Button Text="Login" Command="{Binding LoginCommand}" />
 	</StackLayout>
 </ContentPage>

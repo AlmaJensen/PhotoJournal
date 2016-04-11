@@ -13,7 +13,7 @@ namespace Journal
 		public App()
 		{
 			// The root page of your application
-			var page = FreshPageModelResolver.ResolvePageModel<PageModels.RegistrationPageModel>();
+			var page = FreshPageModelResolver.ResolvePageModel<PageModels.PinPageModel>();
 			var basicNavContainer = new FreshNavigationContainer(page);
 			MainPage = basicNavContainer;
 		}
