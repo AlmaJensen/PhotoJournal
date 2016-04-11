@@ -10,7 +10,7 @@ using Xamarin.Forms;
 namespace Journal.PageModels
 {
 	[ImplementPropertyChanged]
-	class LoginPageModel : FreshBasePageModel
+	class PinPageModel : FreshBasePageModel
 	{
 		public string EntryText {
 			get;
@@ -19,7 +19,7 @@ namespace Journal.PageModels
 		public Command LoginCommand {
 			get
 			{
-				return new Command(async x => await CoreMethods.PushPageModel<RegistrationPageModel>());
+				return new Command(async x => await CoreMethods.PushPageModel<PinPageModel>());
 			}
 		}
 
