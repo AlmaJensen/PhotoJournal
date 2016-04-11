@@ -47,8 +47,35 @@
     <Compile Include="PageModels\PinPageModel.cs" />
     <Compile Include="PageModels\RegistrationPageModel.cs" />
     <Compile Include="PageModels\ViewPhotoEntryPageModel.cs" />
+    <Compile Include="Pages\AccountPage.xaml.cs">
+      <DependentUpon>AccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditEntryPage.xaml.cs">
+      <DependentUpon>AddEditEntryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditPhotoEntryPage.xaml.cs">
+      <DependentUpon>AddEditPhotoEntryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EntryListPage.xaml.cs">
+      <DependentUpon>EntryListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EntryMainPage.xaml.cs">
+      <DependentUpon>EntryMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LargePhotoViewPage.xaml.cs">
+      <DependentUpon>LargePhotoViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PinPage.xaml.cs">
       <DependentUpon>PinPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegistrationPage.xaml.cs">
+      <DependentUpon>RegistrationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewPhotoEntryPage.xaml.cs">
+      <DependentUpon>ViewPhotoEntryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -87,6 +114,44 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\PinPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\AccountPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AddEditEntryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AddEditPhotoEntryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EntryListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EntryMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\LargePhotoViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MapPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RegistrationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ViewPhotoEntryPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
