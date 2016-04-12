@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.iOS", "Services\Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.WinPhone", "Services\Services.WinPhone\Services.WinPhone.csproj", "{B9DB13DC-EC05-4AD4-8F51-C0737D251755}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Services\Services\Service.csproj", "{46EE6A33-3BE6-48A7-918D-90C8E333C135}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JournalServices", "Services\Services\JournalServices.csproj", "{46EE6A33-3BE6-48A7-918D-90C8E333C135}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
