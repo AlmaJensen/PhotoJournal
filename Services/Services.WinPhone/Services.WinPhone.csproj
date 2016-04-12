@@ -79,8 +79,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Services\Services.csproj">
-      <Name>Services</Name>
+    <ProjectReference Include="..\Services\Service.csproj">
+      <Name>Service</Name>
+      <Project>{46EE6A33-3BE6-48A7-918D-90C8E333C135}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>3b32fb45-f1da-44ab-8f6e-4a715a0add90</ProjectGuid>
+    <ProjectGuid>{3B32FB45-F1DA-44AB-8F6E-4A715A0ADD90}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Services.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -67,8 +67,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Services\Services.csproj">
-      <Name>Services</Name>
+    <ProjectReference Include="..\Services\Service.csproj">
+      <Name>Service</Name>
+      <Project>{46EE6A33-3BE6-48A7-918D-90C8E333C135}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -139,10 +140,12 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Services\FileStorage.cs" />
     <Compile Include="ViewController.cs" />
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
