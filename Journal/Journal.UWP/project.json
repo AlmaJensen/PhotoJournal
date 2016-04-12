@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "FreshMvvm": "1.0.3.3",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
     "Xamarin.Forms": "2.1.0.6529"
   },
