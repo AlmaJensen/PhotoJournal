@@ -93,9 +93,17 @@ namespace Services.WinPhone.Services
             }
         }
 
-        public Task<bool> Save(string filePath, string stringToSave)
+        public async Task<bool> Save(string filePath, string stringToSave)
         {
-            throw new NotImplementedException();
+			var stringBytes = System.Text.Encoding.UTF8.GetBytes( stringToSave.ToCharArray());
+			var fileName = filePath.Replace(MyDocumentsPath, "");
+			var datafolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+			var file = await datafolder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
+			using (var stream = await file.OpenStreamForWriteAsync())
+			{
+				await stream.WriteAsync(stringBytes, 0, stringBytes.Length);
+				return true;
+			}
         }
 
         Task<string> IFileService.GetFileReadStream(string path)

@@ -44,7 +44,7 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Services\Service.csproj">
+    <ProjectReference Include="..\Services\JournalServices.csproj">
       <Name>Service</Name>
       <Project>{46EE6A33-3BE6-48A7-918D-90C8E333C135}</Project>
     </ProjectReference>

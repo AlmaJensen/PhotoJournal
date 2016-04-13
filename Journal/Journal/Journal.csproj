@@ -44,6 +44,7 @@
     <Compile Include="PageModels\EntryMainPageModel.cs" />
     <Compile Include="PageModels\LargePhotoViewPageModel.cs" />
     <Compile Include="PageModels\MapPageModel.cs" />
+    <Compile Include="PageModels\MenuPageModel.cs" />
     <Compile Include="PageModels\PinPageModel.cs" />
     <Compile Include="PageModels\RegistrationPageModel.cs" />
     <Compile Include="PageModels\ViewPhotoEntryPageModel.cs" />
@@ -67,6 +68,9 @@
     </Compile>
     <Compile Include="Pages\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PinPage.xaml.cs">
       <DependentUpon>PinPage.xaml</DependentUpon>
@@ -152,6 +156,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ViewPhotoEntryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\MenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
