@@ -3,10 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Journal.Pages.MenuPage">
 	<ScrollView VerticalOptions="FillAndExpand">
-		<StackLayout>
-			<Label Text="Entries">
+		<StackLayout VerticalOptions="FillAndExpand">
+			<Label Text="Entries" FontSize="30">
 				<Label.GestureRecognizers>
 					<TapGestureRecognizer Command="{Binding EntriesTapped}"></TapGestureRecognizer>
+				</Label.GestureRecognizers>
+			</Label>
+			<Label Text="Search" FontSize="30">
+				<Label.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding SearchTapped}"></TapGestureRecognizer>
+				</Label.GestureRecognizers>
+			</Label>
+			<Label Text="Map" FontSize="30">
+				<Label.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding MapTapped}"></TapGestureRecognizer>
+				</Label.GestureRecognizers>
+			</Label>
+			<Label Text="Account" FontSize="30">
+				<Label.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding AccountsTapped}"></TapGestureRecognizer>
+				</Label.GestureRecognizers>
+			</Label>
+			<Label Text="Logout" VerticalOptions="End" FontSize="30">
+				<Label.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding LogoutTapped}"></TapGestureRecognizer>
 				</Label.GestureRecognizers>
 			</Label>
 		</StackLayout>

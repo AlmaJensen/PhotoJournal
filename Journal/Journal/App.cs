@@ -14,18 +14,19 @@ namespace Journal
 		public App()
 		{
 			// The root page of your application
-			//var masterDetail = new FreshMasterDetailNavigationContainer();
-			//var detail = FreshPageModelResolver.ResolvePageModel<PageModels.PinPageModel>();
-			//masterDetail.Detail = new FreshNavigationContainer(detail);
-			//var master = FreshPageModelResolver.ResolvePageModel<MenuPageModel>();
-			//master.Title = "Hello World";
-			//masterDetail.Master = master;
+			var masterDetail = new FreshMasterDetailNavigationContainer();
+			var detail = FreshPageModelResolver.ResolvePageModel<PageModels.PinPageModel>();
+			masterDetail.Detail = new FreshNavigationContainer(detail);
+			var master = FreshPageModelResolver.ResolvePageModel<MenuPageModel>();
+			master.Title = "Hello World";
+			masterDetail.Master = master;
+			MainPage = masterDetail;
 
-			var masterDetailNav = new FreshMasterDetailNavigationContainer();
-			masterDetailNav.Init("Menu");
-			masterDetailNav.AddPage<PinPageModel>("Contacts", null);
-			masterDetailNav.AddPage<MenuPageModel>("Pages", null);
-			MainPage = masterDetailNav;
+			//var masterDetailNav = new FreshMasterDetailNavigationContainer();
+			//masterDetailNav.Init("Menu");
+			//masterDetailNav.AddPage<PinPageModel>("Contacts", null);
+			//masterDetailNav.AddPage<MenuPageModel>("Pages", null);
+			//MainPage = masterDetailNav;
 
 			//var page = FreshPageModelResolver.ResolvePageModel<PageModels.PinPageModel>();
 			//var basicNavContainer = new FreshNavigationContainer(page);

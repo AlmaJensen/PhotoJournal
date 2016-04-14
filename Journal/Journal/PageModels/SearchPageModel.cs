@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace Journal.PageModels
 {
-    [ImplementPropertyChanged]
-    public class AccountPageModel : FreshBasePageModel
-    {
-		public string MainText { get; set; } = "Hello account page";
+	[ImplementPropertyChanged]
+	public class SearchPageModel : FreshBasePageModel
+	{
 	}
 }
