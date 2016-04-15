@@ -1,5 +1,7 @@
 ﻿using FreshMvvm;
+using Journal.Interfaces;
 using Journal.PageModels;
+using Journal.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +15,7 @@ namespace Journal
 	{
 		public App()
 		{
+			FreshIOC.Container.Register<IDataService, DataService>();
 			// The root page of your application
 			var masterDetail = new FreshMasterDetailNavigationContainer();
 			var detail = FreshPageModelResolver.ResolvePageModel<PageModels.PinPageModel>();
