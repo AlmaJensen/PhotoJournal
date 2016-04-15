@@ -1,4 +1,6 @@
 ﻿using FreshMvvm;
+using Journal.DataModels;
+using Journal.Interfaces;
 using PropertyChanged;
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,20 @@ using System.Threading.Tasks;
 namespace Journal.PageModels
 {
     [ImplementPropertyChanged]
-    class EntryMainPageModel : FreshBasePageModel
+    public class EntryMainPageModel : FreshBasePageModel
     {
-    }
+		public EntryModel Entry { get; set; }
+		IDataService _dataservice;
+		public EntryMainPageModel(IDataService dataservice)
+		{
+			_dataservice = dataservice;
+		}
+
+		public override void Init(object initData)
+		{
+			Entry = initData as EntryModel;
+			if (Entry == null)
+				Entry = new EntryModel();
+		}
+	}
 }
