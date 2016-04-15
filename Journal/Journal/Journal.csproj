@@ -37,6 +37,9 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="DataModels\EntryModel.cs" />
+    <Compile Include="DataModels\PhotoModel.cs" />
+    <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="PageModels\AccountPageModel.cs" />
     <Compile Include="PageModels\AddEditEntryPageModel.cs" />
     <Compile Include="PageModels\AddEditPhotoEntryPageModel.cs" />
@@ -86,6 +89,7 @@
       <DependentUpon>ViewPhotoEntryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DataService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -176,6 +180,13 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Services\Services\JournalServices.csproj">
+      <Project>{46ee6a33-3be6-48a7-918d-90c8e333c135}</Project>
+      <Name>JournalServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.1.0.6529\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.1.0.6529\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
