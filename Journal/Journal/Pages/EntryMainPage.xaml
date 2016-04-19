@@ -3,6 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Journal.Pages.EntryMainPage">
 	<StackLayout>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Button Text="Edit" Grid.Row="0" Grid.Column="1" Command="{Binding EditClicked}"/>
+		</Grid>
+		
 		<Label Text="{Binding Entry.EntryTitle}" VerticalOptions="Center" HorizontalOptions="Center" />
 		<Label Text="{Binding Entry.EntryText}" VerticalOptions="Center" HorizontalOptions="Center" />
 	</StackLayout>

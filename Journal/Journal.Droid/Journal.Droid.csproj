@@ -48,12 +48,28 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FormsPlugin.Iconize, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.FormsPlugin.Iconize.1.0.4\lib\MonoAndroid10\FormsPlugin.Iconize.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FormsPlugin.Iconize.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.FormsPlugin.Iconize.1.0.4\lib\MonoAndroid10\FormsPlugin.Iconize.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.1.0.6529\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="Plugin.Iconize, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Iconize.1.0.4\lib\MonoAndroid10\Plugin.Iconize.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Iconize.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Iconize.1.0.4\lib\MonoAndroid10\Plugin.Iconize.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

@@ -121,6 +121,22 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FormsPlugin.Iconize, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.FormsPlugin.Iconize.1.0.4\lib\Xamarin.iOS10\FormsPlugin.Iconize.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FormsPlugin.Iconize.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.FormsPlugin.Iconize.1.0.4\lib\Xamarin.iOS10\FormsPlugin.Iconize.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Iconize, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Iconize.1.0.4\lib\Xamarin.iOS10\Plugin.Iconize.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Iconize.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Iconize.1.0.4\lib\Xamarin.iOS10\Plugin.Iconize.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />

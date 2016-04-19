@@ -2,7 +2,10 @@
   "dependencies": {
     "FreshMvvm": "1.0.3.3",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
-    "Xamarin.Forms": "2.1.0.6529"
+    "Newtonsoft.Json": "8.0.3",
+    "Xam.FormsPlugin.Iconize": "1.0.4",
+    "Xamarin.Forms": "2.1.0.6529",
+    "Xamarin.Forms.Maps": "2.1.0.6529"
   },
   "frameworks": {
     "uap10.0": {}
