@@ -38,8 +38,10 @@
     <Compile Include="App.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="DataModels\EntryModel.cs" />
+    <Compile Include="DataModels\MemberModel.cs" />
     <Compile Include="DataModels\PhotoModel.cs" />
     <Compile Include="Interfaces\IDataService.cs" />
+    <Compile Include="Interfaces\IMemberService.cs" />
     <Compile Include="PageModels\AccountPageModel.cs" />
     <Compile Include="PageModels\AddEditEntryPageModel.cs" />
     <Compile Include="PageModels\AddEditPhotoEntryPageModel.cs" />

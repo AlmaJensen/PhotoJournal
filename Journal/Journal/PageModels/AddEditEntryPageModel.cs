@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace Journal.PageModels
 {
@@ -24,6 +25,17 @@ namespace Journal.PageModels
 			Entry = initData as EntryModel;
 			if (Entry == null)
 				Entry = new EntryModel();
+		}
+		public Command SaveEntry
+		{
+			get
+			{
+				return new Command(async () =>
+				{
+					_dataservice.UpdateEntry(Entry);
+					await CoreMethods.PopPageModel();
+				});
+			}
 		}
 	}
 }

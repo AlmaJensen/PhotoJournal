@@ -10,6 +10,9 @@ namespace Journal.Interfaces
 	public interface IDataService
 	{
 		List<EntryModel> GetAllEntries();
-
+		void CreateEntry(EntryModel entryModel);
+		EntryModel ReadEntry(double entryID);
+		void UpdateEntry(EntryModel entryModel);
+		void DeleteEntry(double entryID);
 	}
 }

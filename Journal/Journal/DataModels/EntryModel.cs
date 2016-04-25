@@ -8,7 +8,7 @@ namespace Journal.DataModels
 {
 	public class EntryModel
 	{
-
+		public double EntryID { get; set; }
 		public DateTime DateOccurred { get; set; }
 		public string EntryText { get; set; }
 		public string EntryTitle { get; set; }

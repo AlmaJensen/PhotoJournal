@@ -11,104 +11,71 @@ using Windows.Storage;
 
 namespace Services.WinPhone.Services
 {
-    public class FileStorage : IFileService
-    {
-        public async Task<byte[]> ReadBytes(string path)
-        {
-            byte[] bytes = new byte[0];
+	public class FileStorage : IFileService
+	{
 
-            try
-            {
-                using (var fs = File.Open(path, FileMode.Open, FileAccess.Read)) // new FileStream(path, FileMode.Open))
-                {
-                    bytes = new byte[fs.Length];
-                    await fs.ReadAsync(bytes, 0, (int)fs.Length);
-                }
-            }
-            catch (Exception ex)
-            {
-                //Insights.Report(ex, Insights.Severity.Error);
-                throw;
-            }
-            return bytes;
-        }
+		public string MyDocumentsPath
+		{
+			get
+			{
+				return ApplicationData.Current.LocalFolder.Path; 
+			}
+		}
 
-        public async Task<bool> Delete(string path)
-        {
-            return await Task.Run(() =>
-            {
-                try
-                {
-                    System.IO.File.Delete(path);
-                    return true;
-                }
-                catch
-                {
-                    Debug.WriteLine("Unable to delete: " + path);
-                    return false;
-                }
-            });
-        }
+		public async void DeleteFile(string Path)
+		{
+			string fileName = ParseFileNameFromPath(Path);
+			var datafolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+			var file  = await datafolder.GetFileAsync(fileName);
+			await file.DeleteAsync(StorageDeleteOption.PermanentDelete);
+		}
 
-        public string MyDocumentsPath
-        {
-            get { return ApplicationData.Current.LocalFolder.Path; }
-        }
+		public async Task<Stream> ReadFileAsStream(string Path)
+		{
+			string fileName = ParseFileNameFromPath(Path);
+			var datafolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+			return await datafolder.OpenStreamForReadAsync(fileName);
+		}
 
-        public Stream GetFileReadStream(string path)
-        {
-            try
-            {
-                return File.OpenRead(path);
-            }
-            catch (Exception ex)
-            {
-                Insights.Report(ex);
-                return null;
-            }
+		public async Task<string> ReadFileAsString(string Path)
+		{
+			string fileName = ParseFileNameFromPath(Path);
+			var datafolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+			using (var file = new StreamReader( await datafolder.OpenStreamForReadAsync(fileName)))
+			{
+				return await file.ReadToEndAsync();
+			}
+		}
 
-        }
+		public async void SaveFile(string Path, Stream Content)
+		{
+			string fileName = ParseFileNameFromPath(Path);
+			var datafolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+			var file = await datafolder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
+			using (var stream = await file.OpenStreamForWriteAsync())
+			{
+				var ms = new MemoryStream();
+				Content.CopyTo(ms);
+				var bytes = ms.ToArray();
+				await stream.WriteAsync(bytes, 0, bytes.Length);
+			}
+		}
 
-        public long GetFileSize(string path)
-        {
-            var info = new FileInfo(path);
-            return info.Length;
-        }
-
-        public async Task<bool> SaveStream(Stream stream, string path)
-        {
-            try
-            {
-                using (var fileStream = System.IO.File.OpenWrite(path))
-                {
-                    stream.Seek(0, SeekOrigin.Begin);
-                    stream.CopyTo(fileStream);
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.ToString());
-                return false;
-            }
-        }
-
-        public async Task<bool> Save(string filePath, string stringToSave)
-        {
-			var stringBytes = System.Text.Encoding.UTF8.GetBytes( stringToSave.ToCharArray());
-			var fileName = filePath.Replace(MyDocumentsPath, "");
+		public async void SaveFile(string Path, string Content)
+		{
+			var stringBytes = System.Text.Encoding.UTF8.GetBytes(Content.ToCharArray());
+			string fileName = ParseFileNameFromPath(Path);
 			var datafolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 			var file = await datafolder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
 			using (var stream = await file.OpenStreamForWriteAsync())
 			{
 				await stream.WriteAsync(stringBytes, 0, stringBytes.Length);
-				return true;
 			}
-        }
+		}
 
-        Task<string> IFileService.GetFileReadStream(string path)
-        {
-            throw new NotImplementedException();
-        }
-    }
+		private string ParseFileNameFromPath(string Path)
+		{
+			return Path.Replace(MyDocumentsPath, "");
+		}
+	}
 }

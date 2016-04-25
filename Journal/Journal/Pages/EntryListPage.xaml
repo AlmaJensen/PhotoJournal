@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Journal.Pages.EntryListPage">
 	<StackLayout VerticalOptions="EndAndExpand">
-		<Label Text="Entry List Page"></Label>
+		<Button Text="Add Entry" Command="{Binding AddEntry}"/>
 		<ListView ItemsSource="{Binding Entries}" SelectedItem="{Binding SelectedEntry}"  >
 			<ListView.ItemTemplate>
 				<DataTemplate>

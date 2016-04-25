@@ -52,5 +52,15 @@ namespace Journal.PageModels
 				});
 			}
 		}
+		public Command AddEntry
+		{
+			get
+			{
+				return new Command(async () =>
+				{
+					await CoreMethods.PushPageModel<AddEditEntryPageModel>();
+				});
+			}
+		}
 	}
 }

@@ -5,10 +5,9 @@
 	<StackLayout VerticalOptions="FillAndExpand">
 		<StackLayout Orientation="Horizontal">
 			<Image Source="{Binding MainImage}"></Image>
-			<Label Text="{Binding TitleText}"></Label>
+			<Entry Text="{Binding TitleText}" Placeholder="Entry Title"/>
+			<Button Command="{Binding SaveEntry}" Text="Save"/>
 		</StackLayout>
-		<ScrollView>
-			<Label Text="{Binding MainText}"></Label>
-		</ScrollView>
+			<Editor Text="{Binding MainText}" VerticalOptions="FillAndExpand"/>	
 	</StackLayout>
 </ContentPage>
