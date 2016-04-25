@@ -8,7 +8,8 @@ namespace JournalServices.StorageModels
 {
 	public class EntryStorageModel
 	{
-		public DateTime DateOccurred { get; set; }
+        public int EntryID { get; set; }
+        public DateTime DateOccurred { get; set; }
 		public string EntryText { get; set; }
 		public string EntryTitle { get; set; }
 		public PhotoStorageModel MainImage { get; set; }
